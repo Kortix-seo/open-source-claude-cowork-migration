@@ -25,7 +25,7 @@ List what you actually use before you move anything. Pull the list from the Clau
 | Projects and instructions | `agents/<name>.md` | Move the prompt, declare its reach |
 | Memory shared with chat | `memory/` files in the repo | Copy durable facts, prune stale notes |
 | Connectors and MCP servers | Connector accounts | Reconnect each service as a connector |
-| Claude models | Any model, your keys | Add provider keys or bring a subscription |
+| Claude models on your plan | Any model, your keys | Add provider keys or bring a subscription |
 | Scheduled tasks | `cron` and `webhook` triggers | Recreate each with `kortix triggers add` |
 | Files saved to your account | A session branch and a change request | Review the diff, then merge |
 | Settings in your Claude account | `kortix.yaml` at the repo root | Recreate the settings as manifest entries |
@@ -62,7 +62,7 @@ Cowork keeps memory in your Claude account, shared with chat. Kortix keeps `MEMO
 
 ## Step 5: reconnect the connectors
 
-A Cowork connector or MCP server becomes a Kortix connector account. Reconnect each service you listed, one at a time, and check that it works before moving to the next. Kortix reaches 3,000+ apps in a click, plus MCP, OpenAPI, Postman, GraphQL and raw HTTP, and connector credentials are brokered server-side and never enter the machine. Slack and Microsoft Teams are live as channels; email is experimental and enabled per project.
+A Cowork connector or MCP server becomes a Kortix connector account. Reconnect each service you listed, one at a time, and check that it works before moving to the next. Connector credentials are brokered server-side and never enter the machine. Slack and Microsoft Teams are live as channels; email is experimental and enabled per project.
 
 ## Step 6: recreate the scheduled tasks as triggers
 
@@ -101,9 +101,9 @@ The session runs in its own isolated sandbox on its own branch. When it finishes
 
 ## What you gain and what you leave behind
 
-What you gain is a configuration a team can clone, diff and roll back, one isolated machine per session, any model on your own keys, and a gate on every change. Thousands of agents can run in parallel on one config, each on its own cloud computer, without touching each other. Run it on Kortix Cloud, in your VPC, or on your own on-prem network, and self-host is free.
+What you gain is a configuration a team can clone, diff and roll back, one isolated machine per session, any model on your own keys, and a gate on every change.
 
-What you leave behind is the account-held model. Cowork keeps projects, instructions and memory in your Claude account and runs on Anthropic's models; Kortix keeps them as files in a repo you own and runs on the model you choose. If you still want a task inside the Claude app, keep Claude Cowork running beside Kortix; the two keep separate state and separate keys.
+What you leave behind is the account-held setup. Cowork keeps projects, instructions and memory in your Claude account and runs on Claude models under the plan's limits; Kortix keeps them as files in a repo you own and runs on the model you choose. If you still want a task inside the Claude app, keep Claude Cowork running beside Kortix; the two keep separate state and separate keys.
 
 ## Next steps
 
