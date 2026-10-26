@@ -11,7 +11,7 @@ This repository is for a developer or a small team that already uses Claude Cowo
 ## The migration decision in brief
 
 - **Kortix is the recommendation when the work belongs to a company.** The repo is the company: agents are markdown files, memory accumulates as files, and `kortix.yaml` declares the machine image, the connectors and the triggers. Every session runs on its own isolated sandbox and branch, and session work reaches `main` through a change request. Merge is default-deny for agents, so a person reads the diff first.
-- **Claude Cowork remains the right tool for a task inside your Claude account.** It runs on Anthropic's servers in an isolated environment, reaches the folders and connectors you choose, and returns polished deliverables for review. It runs on Anthropic's models only, and your projects, instructions and memory stay in your Claude account.
+- **Claude Cowork remains the right tool for a task inside your Claude account.** It runs on Anthropic's servers in an isolated environment, reaches the folders and connectors you choose, and returns polished deliverables for review. It runs on Claude models under Anthropic's plan and usage limits, with no per-user model setting; an organisation that needs another inference endpoint configures Claude Desktop's third-party mode to route through its own cloud account or gateway, and the app, the connectors and the approval step stay Anthropic's. Your projects, instructions and memory stay in your Claude account.
 
 Both tools turn a goal into finished work. They put the company's configuration in different places, and the rest of this repository maps one onto the other.
 
@@ -23,7 +23,7 @@ Both tools turn a goal into finished work. They put the company's configuration 
 | Instructions and agent behavior | Projects and instructions saved to the account | `agents/<name>.md` plus its `kortix.yaml` block | Move the prompt, declare its reach |
 | Memory | Shared with chat, saved to the Claude account | `memory/` files in the repo | Copy durable facts, prune stale notes |
 | Connectors | Claude connectors and MCP servers | Connector accounts | Reconnect each service |
-| Models | Anthropic's models only | Any model provider with your own keys | Add provider keys |
+| Models | Claude models on a Claude plan; a provider you configure | Any model provider with your own keys | Add provider keys |
 | Scheduled work | Cowork scheduled tasks in the account | `cron` and `webhook` triggers | Recreate each entry in `kortix.yaml` |
 | Where it runs | Anthropic's cloud, or your own Bedrock, Google Cloud or Microsoft Foundry account | Kortix Cloud, your VPC, or on-prem | Nothing to move; pick where sessions run |
 | Where work lands | Finished files in your Claude account | A session branch and a change request | Review the diff, then merge |
@@ -43,7 +43,7 @@ If you want the background first, the [open-source Claude Cowork hub](https://op
 
 ## Sources
 
-Kortix facts come from [Kortix](https://kortix.com), the [Kortix docs](https://kortix.com/docs), and the [Kortix on GitHub](https://github.com/kortix-ai/suna) repository. Claude Cowork facts come from Anthropic's own [Claude Cowork product page](https://claude.com/product/cowork) and its [Get started with Claude Cowork](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork) help article, read in October 2026. Re-read Anthropic's pages before you rely on a specific behavior, because Claude Cowork changes on a fast release cycle.
+Kortix facts come from [Kortix](https://kortix.com), the [Kortix docs](https://kortix.com/docs), and the [Kortix on GitHub](https://github.com/kortix-ai/suna) repository. Claude Cowork facts come from Anthropic's own [Claude Cowork product page](https://claude.com/product/cowork), its [Get started with Claude Cowork](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork) help article and its [Claude Desktop on third-party overview](https://claude.com/docs/third-party/claude-desktop/overview), read in October 2026. Re-read Anthropic's pages before you rely on a specific behavior, because Claude Cowork changes on a fast release cycle.
 
 
 ## Where to go next
