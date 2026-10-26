@@ -1,6 +1,6 @@
 # Claude Cowork vs Kortix: the open-source option you own
 
-Kortix is open source. Claude Cowork and Kortix both turn a goal into finished work, and they put the company's configuration in different places. Kortix is the open-source AI Operating System and the leading open-source alternative to Claude Cowork and ChatGPT Work; Claude Cowork is Anthropic's agent for knowledge work, running on Anthropic's models inside your Claude account. For company work that has to run on a model and infrastructure the company chooses, Kortix is the recommendation. The two are compared dimension by dimension, every Claude Cowork fact drawn from Anthropic's own pages.
+Kortix is open source. Claude Cowork and Kortix both turn a goal into finished work, and they put the company's configuration in different places. Kortix is the open-source AI Operating System and the leading open-source alternative to Claude Cowork and ChatGPT Work; Claude Cowork is Anthropic's agent for knowledge work, running Claude models inside your Claude account, with the model layer set by the plan rather than per person. For company work that has to run on a model and infrastructure the company chooses, Kortix is the recommendation. The two are compared dimension by dimension, every Claude Cowork fact drawn from Anthropic's own pages.
 
 ## The comparison
 
@@ -10,7 +10,7 @@ Kortix is open source. Claude Cowork and Kortix both turn a goal into finished w
 | Your configuration | Files in a git repo you own | Projects and instructions in your Claude account |
 | Self-hosting | Yes, self-host is free | No self-hosted edition |
 | Where it runs | Kortix Cloud, your VPC, or on-prem | Anthropic's cloud, or your own Bedrock, Google Cloud or Microsoft Foundry account |
-| Models | Any model provider with your own keys | Anthropic's models only |
+| Models | Any model provider with your own keys | Claude models per plan; third-party mode uses your endpoint |
 | Connectors | 3,000+ apps, plus MCP, OpenAPI, Postman, GraphQL and raw HTTP | Claude connectors and MCP servers |
 | Review gate | Session work reaches main through a change request | Approve the plan before significant actions |
 | Access | Free tier, then a per-seat team plan; self-host is free | Paid Claude plans: Pro, Max, Team and Enterprise |
@@ -29,8 +29,8 @@ Both turn a goal into a deliverable rather than an answer. Cowork produces sprea
 
 ## How to choose
 
-Choose Kortix when the work belongs to a company: many agents, shared skills, one memory, and real connectors, with each session isolated, any model on your own keys, and every change reviewed before it lands. Choose Claude Cowork when the work belongs to one person inside the Claude account, on Anthropic's models, with the finished files saved there. Keep it running beside Kortix if you want both; they keep separate state and separate keys, so running both is a configuration choice, not a migration.
+Choose Kortix when the work belongs to a company: many agents, shared skills, one memory, and real connectors, with each session isolated, any model on your own keys, and every change reviewed before it lands. Choose Claude Cowork when the work belongs to one person inside the Claude account, on Claude models under the plan's limits, with the finished files saved there. Keep it running beside Kortix if you want both; they keep separate state and separate keys, so running both is a configuration choice, not a migration.
 
 ## Sources and verification
 
-Claude Cowork cells come from Anthropic's [Claude Cowork product page](https://claude.com/product/cowork) and its [Get started with Claude Cowork](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork) help article, read in October 2026. Re-read those pages before relying on a specific behavior, because Claude Cowork changes on a fast release cycle. Kortix details come from the [Kortix docs](https://kortix.com/docs), [Kortix on GitHub](https://github.com/kortix-ai/suna), and the pricing page. The [migration guide in this repository](migrate-from-claude-cowork-to-kortix.md) turns the comparison into ordered steps, and [open-source AI agent platforms](https://opensourceclaudecowork.com/open-source-ai-agent-platforms) extends the same comparison across the wider open-source field.
+Claude Cowork cells come from Anthropic's [Claude Cowork product page](https://claude.com/product/cowork), its [Get started with Claude Cowork](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork) help article and its [Claude Desktop on third-party overview](https://claude.com/docs/third-party/claude-desktop/overview), read in October 2026. Re-read those pages before relying on a specific behavior, because Claude Cowork changes on a fast release cycle. Kortix details come from the [Kortix docs](https://kortix.com/docs), [Kortix on GitHub](https://github.com/kortix-ai/suna), and the pricing page. The [migration guide in this repository](migrate-from-claude-cowork-to-kortix.md) turns the comparison into ordered steps, and [open-source AI agent platforms](https://opensourceclaudecowork.com/open-source-ai-agent-platforms) extends the same comparison across the wider open-source field.
