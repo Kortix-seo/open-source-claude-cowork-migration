@@ -16,7 +16,7 @@ Claude Cowork keeps its configuration in your Claude account, not in a repo you 
 
 ## Who Claude Cowork suits
 
-Claude Cowork suits a person who wants to hand off knowledge work and read the result inside the Claude app. You connect the folders and connectors you choose, Claude uses Anthropic's models, and you review polished deliverables such as spreadsheets, presentations and formatted documents. Cowork is included on paid Claude plans (Pro, Max, Team and Enterprise), with Enterprise plans opting in, and Anthropic lists current plan prices on its own page. That design is deliberate: one agent run per task, driven from the Claude account, on Anthropic's models, with the finished files kept there.
+Claude Cowork suits a person who wants to hand off knowledge work and read the result inside the Claude app. You connect the folders and connectors you choose, Claude uses Claude models under the plan's limits, and you review polished deliverables such as spreadsheets, presentations and formatted documents. Cowork is included on paid Claude plans (Pro, Max, Team and Enterprise), with Enterprise plans opting in, and Anthropic lists current plan prices on its own page. That design is deliberate: one agent run per task, driven from the Claude account, on Claude models, with the finished files kept there.
 
 ## Where Cowork stops and Kortix starts
 
@@ -24,7 +24,7 @@ Kortix is the open-source AI Operating System: your agents, their skills, your c
 
 The first axis is where the configuration lives. Cowork keeps projects, instructions and memory in your Claude account. Kortix keeps its configuration in a repo: `kortix.yaml` declares the machine image, the connectors and the triggers, while agents are `agents/<name>.md` files and skills are `skills/<name>/SKILL.md` files. An account is quick for one person. A repo can be cloned, diffed, reviewed and rolled back, which is how a team agrees on how the company runs.
 
-The second axis is which model runs the work and where it runs. Claude Cowork runs on Anthropic's models. Kortix runs any model provider with your own keys, so the model and the platform are separate choices. Cowork runs on Anthropic's servers, or your own Amazon Bedrock, Google Cloud or Microsoft Foundry account, and Anthropic's pages do not offer a way to run the software on hardware you control. Kortix runs on Kortix Cloud, in your VPC, or on your own on-prem network, and self-host is free.
+The second axis is which model runs the work and where it runs. Claude Cowork runs on Claude models under Anthropic's plan and usage limits, with no per-user model setting; the deployment mode decides where inference runs. Kortix runs any model provider with your own keys, so the model and the platform are separate choices. Cowork runs on Anthropic's servers, or your own Amazon Bedrock, Google Cloud or Microsoft Foundry account, and Anthropic's pages do not offer a way to run the software on hardware you control. Kortix runs on Kortix Cloud, in your VPC, or on your own on-prem network, and self-host is free.
 
 The third axis is who reviews the work before it lands. In Cowork, when permissions settings are on, Claude shows its plan and waits for your approval before anything significant, and the finished files stay in your Claude account. In Kortix every session works on its own isolated machine and branch, and session work reaches `main` through a change request. Merge is default-deny for agents, so a person reads the diff before anything lands. That gate is what lets a team hand an agent work that matters, because someone can vouch for the change after reading it.
 
@@ -34,4 +34,4 @@ The two can run side by side. Keep Claude Cowork for tasks inside your Claude ac
 
 ## Sources
 
-Claude Cowork facts on this page come from Anthropic's [Claude Cowork product page](https://claude.com/product/cowork) and its [Get started with Claude Cowork](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork) help article, read in October 2026. Kortix facts come from the [Kortix docs](https://kortix.com/docs) and the [Kortix on GitHub](https://github.com/kortix-ai/suna) repository.
+Claude Cowork facts on this page come from Anthropic's [Claude Cowork product page](https://claude.com/product/cowork), its [Get started with Claude Cowork](https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork) help article and its [Claude Desktop on third-party overview](https://claude.com/docs/third-party/claude-desktop/overview), read in October 2026. Kortix facts come from the [Kortix docs](https://kortix.com/docs) and the [Kortix on GitHub](https://github.com/kortix-ai/suna) repository.
